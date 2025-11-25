@@ -1,0 +1,64 @@
+:root {
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 32px;
+    --space-xl: 64px;
+  
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-lg: 8px;
+    --radius-xl: 16px;
+  
+    /* Opacity */
+    --opacity-low: 0.10;
+    --opacity-md: 0.50;
+    --opacity-high: 0.90;
+  
+    /* Typography */
+    --font-size-xs: 10px;
+    --font-size-sm: 13.6px;
+    --font-size-body: 16px;
+    --font-size-h6: 16px;
+    --font-size-h5: 20px;
+    --font-size-h4: 25px;
+    --font-size-h3: 31px;
+    --font-size-h2: 39px;
+    --font-size-h1: 49px;
+  
+    --line-height-heading: 110%;
+    --line-height-body: 140%;
+  
+    /* Shadows */
+    --shadow-default: 5px 5px 5px rgba(0,0,0,0.15),
+                      inset 4px 4px 5px #00000033;
+  
+    /* Light Theme Colors */
+    --color-fg: #000000;
+    --color-fg-muted: #4a5568;
+    --color-fg-subtle: #a0aec0;
+  
+    --color-bg: #ffffff;
+    --color-bg-muted: #f7fafc;
+    --color-bg-subtle: #edf2f7;
+  
+    --color-accent: #7f9cf5;
+    --color-accent-on: #ffffff;
+    --color-accent-bg: #c3dafe;
+  }
+  
+  .dark {
+    --color-fg: #ffffff;
+    --color-fg-muted: #e2e8f0;
+    --color-fg-subtle: #a0aec0;
+  
+    --color-bg: #1a202c;
+    --color-bg-muted: #4a5568;
+    --color-bg-subtle: #2d3748;
+  
+    --color-accent: #5a67d8;
+    --color-accent-on: #ffffff;
+    --color-accent-bg: #434190;
+  }
+  
