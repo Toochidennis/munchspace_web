@@ -2,6 +2,10 @@ import panImage from "../../src/pan.png";
 import browseOrderImage from "../../src/Browse & order.png";
 import wePickPackImage from "../../src/We Pick & Pack.png";
 import weDeliverImage from "../../src/We Deliver to you.png";
+import womanImage from "../../src/woman.png";
+import cartoonColorfulImage from "../../src/cartoon-colorful.png";
+import topStandImage from "../../src/top-stand.png";
+import orangeSideBgImage from "../../src/orange-side-bg.png";
 import { OrangeArc, GreyArcTop, GreenArc } from "./CategoryAccentShapes";
 
 export default function HowWeServeSection() {
@@ -46,7 +50,6 @@ export default function HowWeServeSection() {
           <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-green-500 rounded-full opacity-30" />
           <div className="absolute bottom-0 right-8 w-16 h-16 md:w-20 md:h-20 bg-yellow-400 rounded-full opacity-40" />
         </div>
-        {/* Replace with actual decoration image */}
       </div>
 
       {/* Main Content Container */}
@@ -95,53 +98,102 @@ export default function HowWeServeSection() {
         </div>
 
         {/* Bottom Promo Banner */}
-        <div className="relative bg-orange-500 rounded-3xl overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="relative bg-orange-500 rounded-[48px] overflow-hidden max-w-[1233px] h-[420px] mx-auto">
+          {/* Orange Side Background */}
+          <div className="absolute top-[5px] right-[3px] h-full w-[580px] z-0" style={{ transform: 'rotate(1deg)', transformOrigin: 'right center' }}>
+            <img
+              src={orangeSideBgImage}
+              alt="Background decoration"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full relative z-10">
             {/* Left Side - Text Content */}
-            <div className="p-8 md:p-12 lg:p-16 space-y-6">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                First Delivery is{" "}
-                <span className="block mt-2 text-white font-extrabold">
-                  Free.
-                </span>
-              </h3>
-              <p className="text-xl md:text-2xl text-white/90">
-                Download our app now.
-              </p>
+            <div className="p-8 md:p-10 lg:p-12 pt-12 md:pt-16 lg:pt-1 space-y-8">
+              <div className="w-[604px] h-[124px]">
+                <h3 className="text-[48px] font-semibold text-white leading-[130%] tracking-[0%]" style={{ fontFamily: 'Rubik' }}>
+                  First Delivery is Free. Download our app now.
+                </h3>
+              </div>
 
               {/* App Store Buttons */}
-              <div className="flex flex-wrap gap-4 pt-4">
-                {/* App Store Placeholder */}
-                <div className="w-40 h-14 bg-black/20 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm">App Store</span>
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-row gap-4">
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 bg-black text-white rounded-lg border-2 border-white/20 hover:brightness-95 transition w-[134px] h-[45px] p-[10px]"
+                    aria-label="Download on the App Store"
+                  >
+                    <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                    </svg>
+                    <div className="text-left">
+                      <div className="text-[9px] opacity-80 leading-tight">Download on the</div>
+                      <div className="text-xs font-semibold leading-tight">App Store</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="#"
+                    className="inline-flex items-center gap-2 bg-black text-white rounded-lg border-2 border-white/20 hover:brightness-95 transition w-[134px] h-[45px] p-[10px]"
+                    aria-label="Get it on Google Play"
+                  >
+                    <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M3 2L17 12L3 22V2Z" fill="#00A0FF"/>
+                      <path d="M17 12L11 7L11 17L17 12Z" fill="#34A853"/>
+                      <path d="M11 7L3 2L11 12V7Z" fill="#FBBC05"/>
+                      <path d="M11 17L3 22L11 12V17Z" fill="#EA4335"/>
+                    </svg>
+                    <div className="text-left">
+                      <div className="text-[9px] opacity-80 leading-tight">Get it on</div>
+                      <div className="text-xs font-semibold leading-tight">Google Play</div>
+                    </div>
+                  </a>
                 </div>
-                {/* Play Store Placeholder */}
-                <div className="w-40 h-14 bg-black/20 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm">Play Store</span>
+
+                {/* T&C Text */}
+                <div className="flex items-center gap-[10px] w-[108px] h-[24px] opacity-80">
+                  <svg className="w-4 h-4 text-white flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 16v-6"/>
+                    <path d="M12 8h.01"/>
+                  </svg>
+                  <span className="text-white text-sm">T&C apply</span>
                 </div>
               </div>
             </div>
 
             {/* Right Side - Image */}
-            <div className="relative h-full min-h-[400px] lg:min-h-[500px]">
-              {/* Woman with Phone Placeholder */}
-              <div className="absolute inset-0 flex items-end justify-center lg:justify-end">
-                <div className="w-64 h-96 md:w-80 md:h-[500px] bg-orange-400/30 rounded-t-full flex items-center justify-center">
-                  <span className="text-white text-sm">Woman Image</span>
-                </div>
+            <div className="absolute top-[-13px] left-[495px] w-[690px] h-[460px] opacity-100">
+              {/* Top Stand Background Image */}
+              <div className="absolute top-[-60.87px] left-[105.64px] w-[580.58px] h-[580.58px] opacity-110 z-10" style={{ transform: 'rotate(4.12deg)' }}>
+                <img
+                  src={topStandImage}
+                  alt="Background decoration"
+                  className="w-full h-full object-contain"
+                />
               </div>
 
-              {/* Balloon Decorations */}
-              <div className="absolute top-8 left-8 w-20 h-24 bg-yellow-300/40 rounded-full">
-                {/* Balloon placeholder */}
+              {/* Woman with Phone */}
+              <div className="absolute inset-0 flex items-end justify-center lg:justify-end z-20">
+                <img
+                  src={womanImage}
+                  alt="Woman with phone"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="absolute top-20 right-12 w-16 h-20 bg-red-400/40 rounded-full">
-                {/* Balloon placeholder */}
-              </div>
-              <div className="absolute bottom-32 left-12 w-12 h-16 bg-blue-400/40 rounded-full">
-                {/* Balloon placeholder */}
-              </div>
+
             </div>
+
+          {/* Cartoon Colorful Image - positioned relative to the banner card */}
+          <div className="absolute top-[311.79px] left-[1056.62px] w-[105.82px] h-[105.82px] opacity-80 z-30" style={{ transform: 'rotate(10.12deg)' }}>
+            <img
+              src={cartoonColorfulImage}
+              alt="Cartoon decoration"
+              className="w-full h-full object-contain"
+            />
+          </div>
           </div>
         </div>
       </div>
