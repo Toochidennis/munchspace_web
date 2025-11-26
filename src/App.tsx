@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "../layouts/Navbar/Navbar";
 import Hero from "../layouts/Hero";
-import JoinAsRider from "../layouts/JoinAsRider";
+import JoinAsRider from "../layouts/RiderSignup";
 import NotFound from "../layouts/NotFound";
 
 function App() {

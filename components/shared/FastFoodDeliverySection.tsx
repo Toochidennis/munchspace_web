@@ -3,9 +3,9 @@ import { type FC } from "react";
 // Asset imports (placeholders - will be replaced with actual images)
 import riderBgImage from "../../src/rider-bg.jpg";
 import riderImage from "../../src/rider-on-bike.png";
-import smartAiIcon from "../../src/smart-ai.svg";
-import allInOneIcon from "../../src/all-in-one-delivery.svg";
-import overlayPattern from "../../transparent.png";
+import smartAiIcon from "../../src/Frame 19.jpg";
+import allInOneIcon from "../../src/Frame 6.jpg";
+import overlayPattern from "../../src/transparent.png";
 
 // Types
 interface Feature {
@@ -45,12 +45,12 @@ const FeatureItem: FC<{ icon: string; title: string; description: string }> = ({
   description,
 }) => {
   return (
-    <div className="flex items-start gap-4 p-6 bg-white/10 backdrop-blur-sm rounded-2xl shadow-lg hover:bg-white/15 transition-colors duration-300">
-      <figure className="w-14 h-14 flex-shrink-0">
+    <div className="flex items-start gap-4 p-6">
+      <figure className="w-14 h-14 flex-shrink-0 rounded-full border-2 border-white/30">
         <img
           src={icon}
           alt={`${title} icon`}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain rounded-full"
         />
       </figure>
       <div className="flex flex-col gap-1">
@@ -90,14 +90,14 @@ export function FastFoodDeliverySection({
 }: FastFoodDeliverySectionProps) {
   return (
     <section
-      className={`relative w-full overflow-hidden bg-neutral-900 py-16 md:py-20 lg:pt-32 lg:pb-24 xl:pt-40 xl:pb-32 ${className}`}
+      className={`relative w-full h-[500px] bg-neutral-900 py-11 md:py-20 lg:pt-32 lg:pb-24 xl:pt-40 xl:pb-32 ${className}`}
     >
       {/* Background Image with Pattern Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={backgroundImage}
           alt=""
-          className="w-full h-[100%] object-cover object-fit"
+          className="w-full object-cover object-fit"
         />
         <img
           src={overlayPattern}
@@ -107,12 +107,12 @@ export function FastFoodDeliverySection({
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
         {/* Mobile Layout: Single Column */}
         <div className="lg:hidden flex flex-col items-center gap-8">
           {/* Text Content */}
           <div className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+            <h2 className="text-4xl sm:text-4xl font-bold text-white leading-tight">
               The Fastest{" "}
               <span className="text-orange-500">food Delivery</span> in town
             </h2>
@@ -171,11 +171,9 @@ export function FastFoodDeliverySection({
         {/* Desktop Layout: Three Columns */}
         <div className="hidden lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
           {/* Left Column: Text Content */}
-          <div className="lg:col-span-4 space-y-6">
-            <h2 className="text-4xl xl:text-5xl font-bold text-white leading-tight tracking-wide">
-              The Fastest{" "}
-              <span className="text-orange-500 whitespace-nowrap">food Delivery</span>{" "}
-              <span className="whitespace-nowrap">in town</span>
+          <div className="lg:col-span-4 space-y-6 lg:-mt-28 xl:-mt-32">
+            <h2 className="text-4xl xl:text-[41px] font-bold text-white leading-tight tracking-wide whitespace-nowrap">
+              The Fastest <span className="text-orange-500"><br />food Delivery</span> in town
             </h2>
             <p className="text-lg xl:text-xl text-white/90 leading-relaxed">
               {subtitle}
@@ -183,16 +181,16 @@ export function FastFoodDeliverySection({
           </div>
 
           {/* Center Column: Rider Image */}
-          <figure className="lg:col-span-4 flex justify-center overflow-visible relative">
+          <figure className="lg:col-span-4 flex justify-center overflow-visible relative z-20">
             <img
               src={customRiderImage}
               alt="Delivery rider on yellow bike"
-              className="w-[180%] max-w-none h-auto object-contain transform lg:-mt-32 lg:-mb-40 xl:-mt-40 xl:-mb-48 scale-110"
+              className="w-[180%] max-w-none h-auto object-contain transform lg:-mt-32 xl:-mt-[190px] scale-110"
             />
           </figure>
 
           {/* Right Column: Features */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-6 lg:-mt-28 xl:-mt-32">
             {features.map((feature, index) => (
               <FeatureItem key={index} {...feature} />
             ))}

@@ -2,6 +2,7 @@ import { MapPin, ArrowRight, Apple, PlayCircle } from "lucide-react";
 import DownloadAppSection from "../../components/shared/DownloadAppSection";
 import DeliveryCategoriesSection from "../../components/shared/DeliveryCategoriesSection";
 import FastFoodDeliverySection from "../../components/shared/FastFoodDeliverySection";
+import HowWeServeSection from "../../components/shared/HowWeServeSection";
 import profileImg from "../../src/assets/profile.png";
 import phoneImg from "../../src/assets/HeroComponent.svg";
 
@@ -140,12 +141,19 @@ export default function Hero() {
     </section>
 
     {/* Delivery Categories Section */}
-    <section className="relative bg-green-50 py-16 md:py-20 lg:py-24">
+    <section className="relative bg-green-50 pt-16 md:pt-20 lg:pt-20 pb-8 md:pb-10 lg:pb-12">
       <DeliveryCategoriesSection />
     </section>
 
-    {/* Fast Food Delivery Section */}
-    <FastFoodDeliverySection />
+    {/* Grouped Container: Fast Food Delivery + How We Serve Sections */}
+    <section className="relative bg-green-50 pt-0 pb-10 md:pb-20 lg:pb-20">
+      {/* Fast Food Delivery Section */}
+      <FastFoodDeliverySection />
+    </section>
+    <section className="relative bg-green-50 py-16 md:py-20 lg:py-1">
+       {/* How We Serve Section */}
+      <HowWeServeSection />
+    </section>
     </>
   );
 }
