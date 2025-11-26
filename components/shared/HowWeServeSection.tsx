@@ -6,6 +6,7 @@ import womanImage from "../../src/woman.png";
 import cartoonColorfulImage from "../../src/cartoon-colorful.png";
 import topStandImage from "../../src/top-stand.png";
 import orangeSideBgImage from "../../src/orange-side-bg.png";
+import lineImage from "../../src/line.png";
 import { OrangeArc, GreyArcTop, GreenArc } from "./CategoryAccentShapes";
 
 export default function HowWeServeSection() {
@@ -60,7 +61,7 @@ export default function HowWeServeSection() {
         </h2>
 
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12 mb-20 md:mb-28 lg:mb-32">
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12 mb-20 md:mb-28 lg:mb-30">
           {services.map((service) => (
             <div key={service.id} className="flex justify-center">
               <div className="flex flex-col items-center space-y-6 md:space-y-8">
@@ -72,8 +73,6 @@ export default function HowWeServeSection() {
                     <GreyArcTop />
                     <OrangeArc accentColor="#E76A39" />
                   </div>
-
-                  {/* Product Image - centered and slightly overlapping decorative shapes */}
                   <div className="absolute inset-0 flex items-center justify-center z-20">
                     <img
                       src={service.image}
@@ -108,6 +107,15 @@ export default function HowWeServeSection() {
             />
           </div>
 
+          {/* Dashed Line Image - positioned within orange section */}
+          <div className="absolute top-[197.5px] left-[490.5px] w-[283px] h-[121.52px] opacity-100 z-30 pointer-events-none">
+            <img
+              src={lineImage}
+              alt="Dashed line decoration"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full relative z-10">
             {/* Left Side - Text Content */}
             <div className="p-8 md:p-10 lg:p-12 pt-12 md:pt-16 lg:pt-1 space-y-8">
@@ -125,7 +133,7 @@ export default function HowWeServeSection() {
                     className="inline-flex items-center gap-2 bg-black text-white rounded-lg border-2 border-white/20 hover:brightness-95 transition w-[134px] h-[45px] p-[10px]"
                     aria-label="Download on the App Store"
                   >
-                    <svg className="w-5 h-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <svg className="w-5 h-8 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
                     </svg>
                     <div className="text-left">
@@ -139,14 +147,14 @@ export default function HowWeServeSection() {
                     className="inline-flex items-center gap-2 bg-black text-white rounded-lg border-2 border-white/20 hover:brightness-95 transition w-[134px] h-[45px] p-[10px]"
                     aria-label="Get it on Google Play"
                   >
-                    <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <svg className="w-5 h-8 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path d="M3 2L17 12L3 22V2Z" fill="#00A0FF"/>
                       <path d="M17 12L11 7L11 17L17 12Z" fill="#34A853"/>
                       <path d="M11 7L3 2L11 12V7Z" fill="#FBBC05"/>
                       <path d="M11 17L3 22L11 12V17Z" fill="#EA4335"/>
                     </svg>
                     <div className="text-left">
-                      <div className="text-[9px] opacity-80 leading-tight">Get it on</div>
+                      <div className="text-[9px] opacity-80 leading-tight">Download on the</div>
                       <div className="text-xs font-semibold leading-tight">Google Play</div>
                     </div>
                   </a>
@@ -163,6 +171,7 @@ export default function HowWeServeSection() {
                 </div>
               </div>
             </div>
+            
 
             {/* Right Side - Image */}
             <div className="absolute top-[-13px] left-[495px] w-[690px] h-[460px] opacity-100">
